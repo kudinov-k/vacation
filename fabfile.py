@@ -17,7 +17,7 @@ def deploy():
 
     with cd('/root/project/vacation'):
         with environment:
-            run('git pull')
+            run('git pull origin master')
             run('pip install -r requirements.txt')
             run('python ./manage.py migrate')
             #run('python ./manage.py collectstatic --noinput')
